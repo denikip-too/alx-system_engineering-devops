@@ -1,2 +1,2 @@
 #!/bin/bash
-echo -e $( ls -pma) \n
+echo -e $( ls -pma)
