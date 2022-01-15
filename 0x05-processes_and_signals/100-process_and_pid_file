@@ -8,17 +8,14 @@ cleanup ()
 {
 echo "I hate the kill command"
 sudo pkill -f /var/run/myscript.pid
-exit 0
 }
 cleansup ()
 {
 sudo pkill -f /var/run/myscript.pid
-exit 0
 }
 cleanups ()
 {
 echo "Y U no love me?!"
-exit 0
 }
 trap cleanup SIGTERM
 trap cleanups SIGINT
