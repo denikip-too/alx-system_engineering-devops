@@ -23,5 +23,5 @@ trap cleansup SIGQUIT
 while true
 do
         echo "To infinity and beyond"
-	sleep 3
+	sleep 2
 done
