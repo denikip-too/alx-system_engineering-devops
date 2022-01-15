@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 #Process and PID file
-if [ ! -e /var/run/$myscript.pid ]
+if [ ! -e /var/run/myscript.pid ]
 then
-	echo $$ > /var/run/$myscript.pid
+	echo $$ > /var/run/myscript.pid
 fi
 cleanup ()
 {
