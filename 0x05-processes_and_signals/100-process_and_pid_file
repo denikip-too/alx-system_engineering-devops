@@ -7,18 +7,15 @@ fi
 cleanup ()
 {
 echo "I hate the kill command"
-sudo pkill -f /var/run/myscript.pid
-exit
+sudo rm -f /var/run/myscript.pid
 }
 cleansup ()
 {
-sudo pkill -f /var/run/myscript.pid
-exit
+sudo rm -f /var/run/myscript.pid
 }
 cleanups ()
 {
 echo "Y U no love me?!"
-exit
 }
 trap cleanup SIGTERM
 trap cleanups SIGINT
