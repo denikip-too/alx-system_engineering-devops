@@ -1,11 +1,7 @@
 #!/usr/bin/env bash
 #Manage deamons or background process
-if [ ! -e /tmp/my_process ]
-then
-	mkdir /tmp/ $$ touch /tmp/my_process
-fi
 while true
 do
-	echo "I am alive!" > my_process
+	echo "I am alive!" >> /tmp/my_process
 	sleep 2
 done
