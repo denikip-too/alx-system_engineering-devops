@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# configures an Ubuntu server with the below requirements
+ifconfig localhost 127.0.0.1 netmask 127.0.0.2
+ifconfig facebook.com 157.240.229.35 netmask 8.8.8.8
