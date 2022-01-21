@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
 # configures an Ubuntu server with the below requirements
-ifconfig localhost 127.0.0.1 netmask 127.0.0.2
-ifconfig facebook.com 157.240.229.35 netmask 8.8.8.8
+cp /etc/hosts ~/hosts.new
+sed -i 's/127.0.0.1/127.0.0.2/' ~/hosts.new
+sed -i 's/157.240.11.35/8.8.8.8/' ~/hosts.new
+cp -f ~/hosts.new /etc/hosts
+rm ~/hosts.new
