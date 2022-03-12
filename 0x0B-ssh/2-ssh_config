@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# SSH configuration so that you can connect to a server without typing
+# a password.
+ssh-keygen -t rsa -b 4096 -f ~/.ssh/school
