@@ -3,12 +3,12 @@
 # Must be configured to use the private key ~/. ssh/school
 include stdlib
 
-file { 'USE private key':
+file_line { 'USE private key':
   path =>  '/etc/ssh/ssh_config',
   line =>  'IdentityFile ~/.ssh/school'
 }
 
-file { 'TURN OFF Password Authenticatication':
+file_line { 'TURN OFF Password Authenticatication':
   path =>  '/etc/ssh/ssh_config',
   line =>  'PasswordAuthentication no'
 }
