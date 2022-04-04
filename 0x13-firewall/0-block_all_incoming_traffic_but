@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Configure ufw so that it blocks all incoming traffic, except 
+# TCP port: 22 (SSH), 443(HTTPS SSL), and 80 (HTTP)
+sudo apt update
+sudo apt install ufw
+sudo ufw default allow outgoing
+sudo ufw default deny incoming
+sudo ufw allow proto tcp from 34.139.147.144 to any port 22, 443, 80
