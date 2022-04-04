@@ -10,4 +10,7 @@ sudo ufw allow http
 sudo ufw enable
 # sudo iptables -t nat -A OUTPUT -o lo -p tcp --dport 8080 -j REDIRECT --to-port 80
 # sudo iptables -A PREROUTING -t nat -p tcp --dport 8080/TCP -j REDIRECT --to-ports 80/TCP
-sudo iptables -t nat -I PREROUTING -p tcp --dport 8080 -j REDIRECT --to-ports 80
+# sudo iptables -t nat -I PREROUTING -p tcp --dport 8080 -j REDIRECT --to-ports 80
+sudo iptables -A INPUT -i eth0 -p tcp --dport 80 -j ACCEPT
+sudo iptables -A INPUT -i eth0 -p tcp --dport 8080 -j ACCEPT
+sudo iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 8080 -j REDIRECT --to-port 80
