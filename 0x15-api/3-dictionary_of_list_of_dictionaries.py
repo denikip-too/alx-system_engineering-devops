@@ -6,6 +6,7 @@ his/her TODO list progress and export to dictionary of list of dictionaries
 import json
 import requests
 
+
 def todo_list():
     url = "https://jsonplaceholder.typicode.com/"
     employees = requests.get(url + 'users').json()

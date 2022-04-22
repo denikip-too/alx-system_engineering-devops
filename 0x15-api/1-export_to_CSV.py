@@ -7,6 +7,7 @@ import csv
 import requests
 import sys
 
+
 def todo_list():
     url = "https://jsonplaceholder.typicode.com/"
     employee = requests.get(url + 'users/{}'.format(sys.argv[1])).json()
