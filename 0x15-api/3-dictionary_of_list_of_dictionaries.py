@@ -17,8 +17,8 @@ def todo_list():
                 "task": task.get("title"),
                 "completed": task.get("completed"),
                 "username": employee.get("username")
-            } for task in requests.get(url + "todos",
-                                    params={"userId": employee.get("id")}).json()]
+            } for task in requests.get(url + "todos"
+                , params={"userId": employee.get("id")}).json()]
             for employee in employees}, jsonfile)
 
 if __name__ == '__main__':
