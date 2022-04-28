@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # configure web-02 to be identical to web-01
-apt-get -y install
+apt-get update
 apt-get -y install nginx
 sudo ufw allow 'Nginx HTTP'
 sudo service nginx start
@@ -11,4 +11,4 @@ sed -i "38i\error_page 404 /error_404.html;" /etc/nginx/sites-available/default
 printf %s "server {
     add_header X-Served-By $HOSTNAME;
 }" > /etc/nginx/sites-available/default
-sudo nginx -s restart
+service nginx restart
