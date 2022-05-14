@@ -15,8 +15,8 @@ listen load_balancer
 	balance roundrobin
 	option httpclose
 	option forwardfor
-	server 449-web-01 34.139.131.161:80 check
-	server 449-web-02 44.200.101.61:80 check
+	server 414-web-01 44.192.44.2 check
+	server 414-web-02 3.236.234.46 check
 " >> /etc/haproxy/haproxy.cfg
 
 service haproxy start
